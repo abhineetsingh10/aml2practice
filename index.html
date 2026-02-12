@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AML Learning Journey</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 30px;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+select, button {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.line-actual {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3;
+}
+
+.line-classroom {
+  fill: none;
+  stroke: seagreen;
+  stroke-width: 3;
+  stroke-dasharray: 5 5;
+}
+
+.axis path, .axis line {
+  stroke: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Student Question Solving Journey</h3>
+
+<div class="controls">
+  <select id="studentSelect"></select>
+</div>
+
+<svg id="chart"></svg>
+
+<script src="aml_chart.js"></script>
+
+</body>
+</html>
