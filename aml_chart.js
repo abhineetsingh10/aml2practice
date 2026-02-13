@@ -13,7 +13,7 @@ function renderChart() {
 
   const margin = {
     top: 80,
-    right: 120,
+    right: 200,
     bottom: 170,
     left: 110
   };
