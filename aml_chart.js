@@ -5,7 +5,7 @@ function renderChart() {
   const svg = d3.select("#chart");
 
   const fullWidth = window.innerWidth * 0.85;
-  const fullHeight = window.innerHeight * 0.75;
+  const fullHeight = window.innerHeight * 0.82;
 
   svg
     .attr("width", fullWidth)
