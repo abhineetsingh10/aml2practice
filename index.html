@@ -2,52 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>AML Learning Journey</title>
+<title>Student AML Learning Journey</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 
 <style>
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  margin: 30px;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
 }
 
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  padding: 30px 20px 10px 20px;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ===== CONTROLS ===== */
 .controls {
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;   /* ⬅ moves left */
+  margin-left: 60px;             /* optional spacing */
+  margin-bottom: 10px;
 }
 
-select, button {
-  padding: 6px 10px;
-  font-size: 14px;
+select {
+  padding: 8px 14px;
+  font-size: 16px;
 }
 
-.line-actual {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 3;
+/* ===== CHART ===== */
+#chart {
+  display: block;
+  margin: auto;
 }
 
-.line-classroom {
-  fill: none;
-  stroke: seagreen;
-  stroke-width: 3;
-  stroke-dasharray: 5 5;
+/* ===== METRIC BOX ===== */
+.metric-box {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  background: #f4f4f4;
+  padding: 18px 22px;
+  border-radius: 14px;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
-.axis path, .axis line {
-  stroke: #ccc;
+.metric-box strong {
+  font-size: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<h3>Student Question Solving Journey</h3>
+<div class="header">
+  <h1>Student AML Learning Journey</h1>
+</div>
 
 <div class="controls">
   <select id="studentSelect"></select>
 </div>
 
 <svg id="chart"></svg>
+
+<div id="metrics" class="metric-box"></div>
 
 <script src="aml_chart.js"></script>
 
